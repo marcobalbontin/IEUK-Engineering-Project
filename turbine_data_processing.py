@@ -14,3 +14,8 @@ print("")
 print("First anomalies in faulty turbines:")
 first_anomaly_per_turbine = anomalies.drop_duplicates(subset='turbine_id')
 print(first_anomaly_per_turbine)
+
+print("")
+print("Number of anomalies per each turbine:")
+turbine_counts = anomalies['turbine_id'].value_counts()
+print(turbine_counts)
