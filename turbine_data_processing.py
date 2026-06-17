@@ -12,10 +12,10 @@ print(anomalies) # prints the anomalies dataframe
 
 print("")
 print("First anomalies in faulty turbines:")
-first_anomaly_per_turbine = anomalies.drop_duplicates(subset='turbine_id')
+first_anomaly_per_turbine = anomalies.drop_duplicates(subset='turbine_id') # identifies the first anomaly for each faulty turbine
 print(first_anomaly_per_turbine)
 
 print("")
 print("Number of anomalies per each turbine:")
-turbine_counts = anomalies['turbine_id'].value_counts()
+turbine_counts = anomalies['turbine_id'].value_counts() # returns the turbine ID with count of faults
 print(turbine_counts)
