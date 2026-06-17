@@ -9,3 +9,8 @@ anomalies = df[temp_anomaly | vibration_anomaly] # variable holding all anomalie
 
 print(f"Found {len(anomalies)} anomalies out of {len(df)} records") # string printed using f-strings with total number of anomalies
 print(anomalies) # prints the anomalies dataframe
+
+print("")
+print("First anomalies in faulty turbines:")
+first_anomaly_per_turbine = anomalies.drop_duplicates(subset='turbine_id')
+print(first_anomaly_per_turbine)
